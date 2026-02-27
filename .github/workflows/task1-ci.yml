@@ -57,6 +57,6 @@ jobs:
       #   run: |
       #     docker tag dodo-api:${{ github.sha }} ghcr.io/<org>/<repo>/dodo-api:${{ github.sha }}
       #     docker tag dodo-frontend:${{ github.sha }} ghcr.io/<org>/<repo>/dodo-frontend:${{ github.sha }}
-      #     docker push ghcr.io/<org>/<repo>/dodo-api:${{ github.sha }}
-      #     docker push ghcr.io/<org>/<repo>/dodo-frontend:${{ github.sha }}
+      #     docker push ghcr.io/lavanyachamarthi24/DevOps_Projects/dodo-api:${{ github.sha }}
+      #     docker push ghcr.io/lavanyachamarthi24/DevOps_Projects/dodo-frontend:${{ github.sha }}
 
