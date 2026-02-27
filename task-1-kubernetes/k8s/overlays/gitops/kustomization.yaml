@@ -1,0 +1,22 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../../base
+
+namePrefix: gitops-
+
+labels:
+  - pairs:
+      env: gitops
+
+# Registry images for GitOps/ArgoCD deployments.
+# The CI pipeline can push these tags to GHCR.
+images:
+  - name: dodo-api
+    newName: ghcr.io/lavanyachamarthi24/devops_projects/dodo-api
+    newTag: latest
+  - name: dodo-frontend
+    newName: ghcr.io/lavanyachamarthi24/devops_projects/dodo-frontend
+    newTag: latest
+

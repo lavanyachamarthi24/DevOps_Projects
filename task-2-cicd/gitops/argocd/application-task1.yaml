@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: task1-microservices
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/lavanyachamarthi24/DevOps_Projects.git
+    targetRevision: main
+    path: task-1-kubernetes/k8s/overlays/gitops
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: dodo-app
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+
