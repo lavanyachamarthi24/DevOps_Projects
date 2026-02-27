@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/lavanyachamarthi24/DevOps_Projects.git
     targetRevision: main
-    path: task-1-kubernetes/k8s/overlays/gitops
+    path: task-1-kubernetes/k8s/overlays/dev
   destination:
     server: https://kubernetes.default.svc
     namespace: dodo-app
