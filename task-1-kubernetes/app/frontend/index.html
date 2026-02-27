@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dodo Payments - Assessment App</title>
+    <style>
+      :root {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      }
+      body {
+        margin: 0;
+        background: #0b1220;
+        color: #e8eefc;
+      }
+      .wrap {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 48px 20px;
+      }
+      .card {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 14px;
+        padding: 20px;
+      }
+      h1 {
+        margin: 0 0 8px;
+        font-size: 28px;
+      }
+      p {
+        margin: 0 0 18px;
+        color: rgba(232, 238, 252, 0.8);
+      }
+      button {
+        appearance: none;
+        border: 0;
+        border-radius: 10px;
+        padding: 10px 14px;
+        background: #5b8cff;
+        color: #081026;
+        font-weight: 650;
+        cursor: pointer;
+      }
+      pre {
+        white-space: pre-wrap;
+        word-break: break-word;
+        background: rgba(0, 0, 0, 0.35);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 12px;
+        padding: 14px;
+        margin-top: 14px;
+      }
+      .row {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="card">
+        <h1>Microservices Demo</h1>
+        <p>
+          Frontend (NGINX) → API (FastAPI) → PostgreSQL. Routed via Kubernetes Ingress.
+        </p>
+        <div class="row">
+          <button id="hello">Call /api/hello</button>
+          <button id="time">Call /api/time</button>
+          <button id="ready">Call /api/readyz</button>
+        </div>
+        <pre id="out">Click a button to call the API.</pre>
+      </div>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>
+

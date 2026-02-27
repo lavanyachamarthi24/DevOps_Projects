@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: api-config
+  namespace: dodo-app
+data:
+  DB_HOST: postgres
+  DB_PORT: "5432"
+  DB_NAME: app
+  DB_SSLMODE: disable
+
