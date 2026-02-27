@@ -79,4 +79,5 @@ async def metrics_middleware(request, call_next):
     LATENCY.labels(path=path).observe(duration)
     REQUESTS.labels(method=request.method, path=path, status=str(response.status_code)).inc()
     return response
+    
 
